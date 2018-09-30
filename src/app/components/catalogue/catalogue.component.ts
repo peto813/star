@@ -91,12 +91,12 @@ export class CatalogueComponent implements OnInit {
               }
           }
         }
-       var characters = JSON.parse(localStorage.getItem('characters')).results;
-       console.log(characters.length, this.characters.count)
-       if (!characters || this.characters.count>characters.length){
-         console.log(this.characters)
-         //var characters = localStorage.setItem('characters', JSON.stringify(this.characters));
-       }
+       // var characters = JSON.parse(localStorage.getItem('characters')).results;
+       // console.log(characters.length, this.characters.count)
+       // if (!characters || this.characters.count>characters.length){
+       //   console.log(this.characters)
+       //   //var characters = localStorage.setItem('characters', JSON.stringify(this.characters));
+       // }
 
        //var characters = localStorage.setItem('characters', JSON.stringify(this.characters.results));
     })
@@ -125,7 +125,7 @@ export class CatalogueComponent implements OnInit {
                if (this.planets.count=== tracker.length  ) {
                   this.planetsArray= tracker;
                   this.mapPlanetstoChars()
-                    //.then(console.log(JSON.parse(localStorage.getItem('characters'))))
+                    .then(console.log(JSON.parse(localStorage.getItem('characters'))))
                }
 
              })
