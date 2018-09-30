@@ -31,8 +31,8 @@ const appRoutes: Routes = [
    //{ path: '', component: CatalogueComponent },
 
    { 
-     path: '/',
-     component: LandingComponent,
+     path: '',
+     component: LandingComponent
      //canActivate:[AuthGuard],
    },
 
