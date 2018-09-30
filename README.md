@@ -42,13 +42,14 @@ It has been implemented in Angular 6 and and gives access some useful informatio
        
 ## To build:
     1. cd into the project directory (cd star).
-    2. ng build (development build) (from within directory).
-    3. ng build  --prod (production build).
-    4. 
+    2. ng build  --prod (production build that minifies and optimized payload).
+   
 ## To serve:
-    1. build using ng build –prod
+    1. ng build  --prod 
     2. copy the output of the /dist folder onto your production web server
-    3. 
+    3. ng build --prod --base-href <REMOTE SERVER BASE URL>
+    4. (optional) if dist file is in differente folder ng build --prod --base-href=/<server subfolder>/
+    5. Configure server and host app or use serverless.
 
 
 For convenience, I have already uploaded the app to the following url:
