@@ -17,11 +17,11 @@ export class NavbarComponent implements OnInit {
   subscription;
 	searchString ='';
 
-  constructor(public data: SharedDataService, private restService: RestService, private router : Router, public http:HttpClient ) { }
+  constructor(public data: SharedDataService, private restService: RestService, public router : Router, public http:HttpClient ) { }
 
   ngOnInit() {
   }
-
+  toggleNavbar = false;
 
 
   callback3(blob){//search by gender
