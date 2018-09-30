@@ -3,6 +3,7 @@ import { RouterModule, Routes }  from '@angular/router';
 // import { AuthGuard } from './auth-guard.service';
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
 import { DetailsComponent } from './components/details/details.component';
+import { LandingComponent } from './landing/landing.component';
 
 
 //import { NonAuthGuard } from './non-auth-guard.service';
@@ -28,8 +29,15 @@ import {PlanetsResolverService }   from './services/planets-resolver/planets-res
 const appRoutes: Routes = [
    // { path: '', component: LandingPageComponent,data:{title:'Bienvenido', returnUrl:'http://localhost:8000/rest-auth/login'} },//, canActivate:[NonAuthGuard]
    //{ path: '', component: CatalogueComponent },
+
    { 
      path: '',
+     component: LandingComponent,
+     //canActivate:[AuthGuard],
+   },
+
+   { 
+     path: 'catalogue',
      component: CatalogueComponent,
      //canActivate:[AuthGuard],
      resolve:{

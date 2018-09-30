@@ -28,6 +28,7 @@ import { OrderListPipe } from './pipes/order-list.pipe';
 import { WeightEditPipe } from './pipes/weight-edit.pipe';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoadingUrlPipe } from './pipes/loading-url.pipe';
+import { LandingComponent } from './landing/landing.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { LoadingUrlPipe } from './pipes/loading-url.pipe';
     OrderListPipe,
     WeightEditPipe,
     NavbarComponent,
-    LoadingUrlPipe
+    LoadingUrlPipe,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
