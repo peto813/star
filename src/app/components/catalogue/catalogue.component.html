@@ -1,0 +1,33 @@
+<div class="container">
+
+	<input [(ngModel)]="search" aria-label="search" placeholder="Filter..." type="search">
+	<div id="pagination">
+		<ngb-pagination id="pagination" (pageChange)="loadPage($event)" [pageSize]="10" [collectionSize]="characters?.count" [(page)]="page" aria-label="Default pagination"></ngb-pagination>	
+	</div>
+	
+	<div>
+
+		<table *ngIf="characters" id="charactersTable" class="table table-bordered">
+		  <thead>
+		    <tr>
+		      <th id="nameColumn" class="tableHeader" scope="col" (click)="setCol('nameColumn')"><fa *ngIf="showSorter('nameColumn')" name="{{faDirection}}"></fa> Name</th>
+		      <th id="genderColumn" (click)="setCol('genderColumn')" class="tableHeader" scope="col"><fa *ngIf="showSorter('genderColumn')" name="{{faDirection}}"></fa> Gender</th>
+		      <th id="birthYearColumn" (click)="setCol('birthYearColumn')"  class="tableHeader" scope="col"><fa *ngIf="showSorter('birthYearColumn')" name="{{faDirection}}"></fa> Birth year</th>
+		      <th id="planetColumn" class="tableHeader" scope="col" (click)="setCol('planetColumn')"><fa *ngIf="showSorter('planetColumn')" name="{{faDirection}}"></fa> Planet</th>
+		      <th (click)="setCol('heightColumn')"  id="heightColumn" class="tableHeader" scope="col"><fa *ngIf="showSorter('heightColumn')" name="{{faDirection}}"></fa> Height</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr *ngFor="let character of (characters.results | characterList:search |orderList:column:sort_order )"><!--|orderList:column:sort_order |  -->
+		  	 <!-- <tr *ngFor="let character of characters.results "> -->
+			      <td title="Click to view details"><a href="" (click)="charDetails($event,character)">{{character.name}}</a></td>
+			      <td>{{character.gender|titlecase}}</td>
+			      <td>{{character.birth_year}}</td>
+			      <td>{{character.homeworld | loadingUrl}}</td>
+			      <td>{{character.height | heightEdit}} </td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+
+</div>

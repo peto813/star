@@ -1,0 +1,55 @@
+
+
+<div class="container emp-profile">
+
+
+
+<div class="wrapper">
+  	<div class="profile-head">
+  		<button routerLink="/" type="button" class="btn btn-primary btn-lg">
+  			<fa name="fa fa-arrow-circle-left"></fa>
+  			Back
+  		</button>
+        <h2>
+            {{character.name}}
+        </h2>
+
+
+        <h5>
+           {{character.gender|titlecase}}
+        </h5>
+        <p class="proile-rating">Height : <span>{{character.height | heightEdit}}</span></p>
+		<p class="proile-rating">Mass : <span>{{character.mass}} Kg</span></p>
+		<p class="proile-rating">Hair color : <span>{{character.hair_color}}</span></p>
+		<p class="proile-rating">Skin color : <span>{{character.skin_color}}</span></p>
+		<p class="proile-rating">Birth year : <span>{{character.birth_year}}</span></p>
+			
+
+		<h4>Other Characters from the same planet</h4>
+
+		<table  id="charactersTable" class="table table-bordered">
+		  <thead>
+		    <tr>
+				<th>Link</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+
+		    <tr *ngFor="let resident of residents">
+				<td><a (click)="getChar(resident)" href="">{{resident.name}}</a></td>
+		    	<!--|orderList:column:sort_order |  -->
+		  	 <!-- <tr *ngFor="let character of characters.results "> -->
+<!-- 			      <td title="Click to view details"><a href="" (click)="charDetails($event,character)">{{character.name}}</a></td>
+			      <td>{{character.gender|titlecase}}</td>
+			      <td>{{character.birth_year}}</td>
+			      <td>{{character.homeworld}}</td>
+			      <td>{{character.height | heightEdit}} </td> -->
+		    </tr>
+		  </tbody>
+		</table>					
+        </div>
+    
+</div>
+
+</div>
+

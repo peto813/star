@@ -1,0 +1,38 @@
+input {
+    color: #333;
+    border: none;
+    border-radius: 100px;
+    background-color: #fafafa;
+    padding: 5px 16px;
+    width: 180px;
+    max-width: 240px;
+    height: 75%;
+    -webkit-appearance: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#charactersTable{
+    margin:20px;
+}
+
+
+#pagination{
+    margin-left: 15px;
+}
+/*ngb-pagination /deep/ .page-item.disabled .page-link {
+    background-color: greenyellow;
+}*/
+
+.tableHeader{
+    cursor: pointer;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
