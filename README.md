@@ -34,7 +34,7 @@ It has been implemented in Angular 6 and and gives access some useful informatio
 ## NOTE:  You must have node and npm installed in order to use this project
 
 ## To run:
-    1. git clone https://github.com/peto813/starwars.git
+    1. git clone https://github.com/peto813/star.git
     2. cd star
     3. run npm install to install dependencies contained in package.json
     4. run ng serve
@@ -48,8 +48,10 @@ It has been implemented in Angular 6 and and gives access some useful informatio
 ## To serve:
     1. build using ng build –prod
     2. copy the output of the /dist folder onto your production web server
+    3. 
 
 
 For convenience, I have already uploaded the app to the following url:
+        https://peto813.github.io/star/
 
 
