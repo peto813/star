@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand">
-  	<img id="icon" [src]="imgPath"  class="img-fluid">
+  	<!-- <img id="icon" [src]="imgPath"  class="img-fluid"> -->
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="toggleNavbar = !toggleNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -16,7 +16,7 @@
       </li>
     </ul>
 
-    <form *ngIf="router.url=='/catalog'" id="searchForm" (ngSubmit)="searchBackend()" class="form-inline my-2 my-lg-0">
+    <form *ngIf="router.url=='/catalogue'" id="searchForm" (ngSubmit)="searchBackend()" class="form-inline my-2 my-lg-0">
       <input name="searchString" [(ngModel)]="searchString" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
